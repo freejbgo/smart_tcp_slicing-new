@@ -1,7 +1,9 @@
 # 更新说明
 ## 1.1 2024-12-02
-*以80端口示例*
+**以80端口示例**
+
 IPTABLES: `iptables -t mangle -A OUTPUT -p tcp --sport 80 -m tcp --tcp-flags SYN,ACK,ACK SYN,ACK -j NFQUEUE --queue-num 100`
+
 python脚本: `python3 geneva.py -q 100 -w 1 -s 7 -c 7 -n 7`
 
 参数说明:
